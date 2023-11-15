@@ -5,7 +5,7 @@
         <div class="container-fluid">
         <a class="navbar-brand">{{name}} - {{class}}</a>
         <a href="{% url 'main:logout' %}">
-            <button>
+            <button type="button" class="btn btn-outline-danger">
                 Logout
             </button>
         </a>
@@ -53,6 +53,7 @@
     <h5>Sesi terakhir login: {{ last_login }}</h5>
     
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product by AJAX</button>
+
     <a href="{% url 'main:create_product' %}">
         <button>
             Add New Product
@@ -99,4 +100,5 @@
     
         document.getElementById("button_add").onclick = addProduct
     </script>
+
 {% endblock content %}
